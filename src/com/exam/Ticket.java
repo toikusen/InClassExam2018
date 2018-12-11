@@ -2,16 +2,21 @@ package com.exam;
 
 public class Ticket {
 	
-	String Taipei;
-	String Keelung;
-	int price;
+	String origin;
+	String destination;
 	int quantity;
+	int price;
 	
-	public Ticket(int price){
+	public Ticket(String origin,String destination,int quantity,int price){
+		this.origin = origin;
+		this.destination = destination;
+		this.quantity = quantity;
 		this.price = price;
+
 	}
 	
-	public int quantity(){
-		this.quantity = quantity;
+	public String get(){
+		String s = (origin)+ " " +(destination)+ " " +(quantity)+ " "  +(price)+ " " + (price*quantity);
+		return s;
 	}
 }

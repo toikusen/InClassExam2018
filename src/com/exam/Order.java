@@ -4,19 +4,20 @@ import java.util.ArrayList;
 
 public class Order {
 	
-	public void add(){
-		ArrayList ticket = new ArrayList();
-		for (int i=0 ;i<1; i++){
-			Ticket t = new Ticket(i);
-			ticket.add(t);
-		}
-		System.out.println(ticket.size());
+	ArrayList ticket = new ArrayList();
+	
+	public void add(Ticket t){
+		ticket.add(t);
 	}
 
 	public void print(){
-		for (int i=0 ;i<1; i++){
-			System.out.print("Taipei    Keelung");
-
+		System.out.println("Result:");
+		for(int i=0;i<ticket.size();i++) {
+			Ticket t =(Ticket)ticket.get(i);
+			System.out.println(t.get());
 		}
+		
 	}
+
+	
 }
